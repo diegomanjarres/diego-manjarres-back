@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="miniapp">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>miniapp</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <script>
+      var app = angular.module('miniapp', []);
+      app.controller('MainCtrl', function($scope, $http) {
+        $scope.process = function() {
+          $http.post('/cube/processData', {
+            input:$scope.input
+          }).then(function(response) {
+            $scope.output = response.data.output
+          })
+        }
+      });
+    </script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <textarea rows="40"
+        cols="50"
+        ng-model="input"></textarea>
+    <button ng-click="process()">process</button>
+    <textarea rows="40"
+        cols="50"
+        disabled
+        ng-model="output"></textarea>
+  </body>
+
+</html>
