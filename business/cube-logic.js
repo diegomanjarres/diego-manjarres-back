@@ -1,6 +1,12 @@
 var _ = require('underscore')
 var Cube = require('./cube-business-object.js')
 
+/**
+ *@function processData - processes an input of operations to perform in a cube
+ * of numbers.
+ * @param {string} input - the input lines to process.
+ * @returns {string} result of query operations on the cube.
+ */
 function processData(input) {
   var cube
   var lines = input.split('\n')
@@ -16,8 +22,13 @@ function processData(input) {
     .reduce((memo, act) => (memo + act + '\n'), '')
 }
 
+/**
+ *@function update - updates a cell in the cube
+ * @param {Object} cube - the cube on which to perform the operations.
+ * @param {string} line - the operation to perform on the cube.
+ * @returns {string} result of the operation on the cube.
+ */
 function executeOperation(cube, line) {
-  //console.log(cube);
   var operation = line.split(' ')
   var type = operation.splice(0, 1)[0]
   var args = operation
