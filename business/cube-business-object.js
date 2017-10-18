@@ -1,18 +1,18 @@
-function Cube(n, m) {
+function Cube(n) {
   this.matrix = new Array()
-  for (var i = 0; i < N; i++) {
-    matrix[i] = new Array()
-    for (var j = 0; j < N; j++) {
-      matrix[i][j] = new Array()
+  for (var i = 0; i < n; i++) {
+    this.matrix[i] = new Array()
+    for (var j = 0; j < n; j++) {
+      this.matrix[i][j] = new Array()
     }
   }
 }
 
-Cube.prototype.update = (x, y, z, v) => {
+Cube.prototype.update = function (x, y, z, v)  {
   this.matrix[x - 1][y - 1][z - 1] = v
 }
 
-Cube.prototype.query = (x1, y1, z1, x2, y2, z2) => {
+Cube.prototype.query = function (x1, y1, z1, x2, y2, z2) {
   var sum = 0
   this.matrix.slice(x1 - 1, x2)
     .forEach((square) => {
@@ -26,3 +26,4 @@ Cube.prototype.query = (x1, y1, z1, x2, y2, z2) => {
     })
   return sum
 }
+module.exports=Cube
