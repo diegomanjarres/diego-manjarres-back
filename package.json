@@ -15,7 +15,7 @@
   ],
   "author": "Diego Manjarres",
   "license": "ISC",
-  "repository":"https://github.com/diegomanjarres/rappi-back-end",
+  "repository": "https://github.com/diegomanjarres/rappi-back-end",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2"
