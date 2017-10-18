@@ -1,0 +1,17 @@
+{
+  "name": "rappi-back-end",
+  "version": "1.0.0",
+  "description": "rappi back end developer application",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "rappi",
+    "application",
+    "back",
+    "end"
+  ],
+  "author": "Diego Manjarres",
+  "license": "ISC"
+}
