@@ -4,7 +4,8 @@
   "description": "rappi back end developer application",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node index.js"
   },
   "keywords": [
     "rappi",
