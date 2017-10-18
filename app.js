@@ -1,12 +1,12 @@
 var express = require('express')
 var bodyParser = require('body-parser')
+var cubeRoutes= require('./routes/cube-routes.js')
+
 var app = express()
 
 app.use(bodyParser.json())
-app.get('/', (req, res) => {
-  res.send('Hello world!')
-})
+app.use('/cube',cubeRoutes)
 
 app.listen(8000, function() {
-  console.log('app listening on port 8000!')
+  console.log('App listening on port 8000!')
 })
